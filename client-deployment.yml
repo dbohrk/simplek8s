@@ -1,0 +1,15 @@
+apiVersion: app/v1
+kind: Deployment
+metdata:
+  name: client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+    spec:
+      containers:
+        - name: client
+          image: dbohrk/multi-client
+          ports:
+            - containerPort: 3000
