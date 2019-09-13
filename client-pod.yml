@@ -4,9 +4,9 @@ metadata:
   name: client-pod
   labels:
     component: web
-  spec:
-    containers:
-      - name: client
-        image: dbohrk/multi-client
-        ports:
-          - containerPort: 3000
+spec:
+  containers:
+    - name: client
+      image: dbohrk/multi-worker
+      ports:
+        - containerPort: 3000
